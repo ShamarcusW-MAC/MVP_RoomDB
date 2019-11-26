@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casa del Marc!"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bar_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="---------------------------------"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_textview"
+        app:layout_constraintBottom_toTopOf="@id/sub_title_textview"
+        />
+
+    <TextView
+        android:id="@+id/sub_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RECEIVE OR DELETE"
+        android:textColor="#8BFFFFFF"
+        android:textStyle="bold|italic"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_textview"
+        />
+    <TextView
+        android:id="@+id/name_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="32dp"
+        android:text = "Name: "
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sub_title_textview"
+        />
+
+    <EditText
+        android:id="@+id/name_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="#FFFFFF"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@id/name_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/name_textview"
+        app:layout_constraintBottom_toBottomOf="@id/name_textview"
+        />
+
+    <TextView
+        android:id="@+id/price_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="32dp"
+        android:text = "Price: "
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_textview"
+        />
+
+    <EditText
+        android:id="@+id/price_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="16dp"
+        android:background="#FFFFFF"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toEndOf="@id/price_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/price_textview"
+        app:layout_constraintBottom_toBottomOf="@id/price_textview"
+        />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Debtor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_edittext"
+        />
+
+    <FrameLayout
+        android:id="@+id/name_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#494949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_button"
+        app:layout_constraintEnd_toStartOf="@id/price_fragment"
+        />
+
+    <FrameLayout
+        android:id="@+id/price_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C8302E2E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_button"
+        app:layout_constraintStart_toEndOf="@id/name_fragment"
+
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
