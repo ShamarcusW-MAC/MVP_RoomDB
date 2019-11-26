@@ -10,13 +10,15 @@
         android:id="@+id/namelist_textview"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="#494949"
+        android:layout_margin="8dp"
+        android:background="#FFFFFF"
         android:textSize="24sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#494949"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
 
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
